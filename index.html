@@ -1,71 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrendLens</title>
-    <style>
-        body {
-            background-color: #111;
-            color: #eee;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 2rem;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background-color: #1e1e1e;
-            border-radius: 8px;
-            padding: 2rem;
-        }
-        input {
-            padding: 0.5rem;
-            border-radius: 4px;
-            border: none;
-            margin-top: 1rem;
-        }
-        button {
-            padding: 0.6rem 1rem;
-            margin-top: 1rem;
-            border: none;
-            border-radius: 4px;
-            background-color: #00d084;
-            color: #111;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        footer {
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            color: #888;
-        }
-    </style>
-    <script>
-        function checkPIN() {
-            const pin = document.getElementById('pin').value;
-            if (pin === '0121') {
-                document.getElementById('main').style.display = 'block';
-                document.getElementById('login').style.display = 'none';
-            } else {
-                alert('Incorrect PIN');
-            }
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TrendLens — Stealth Preview</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0b0c10;
+      color: #c5c6c7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    .box {
+      background: #1f2833;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 14px rgba(0, 255, 130, 0.2);
+      max-width: 90%;
+      width: 400px;
+    }
+    input {
+      padding: 0.6rem;
+      border: none;
+      margin-top: 1rem;
+      border-radius: 5px;
+      width: 80%;
+    }
+    button {
+      padding: 0.6rem 1.2rem;
+      margin-top: 1rem;
+      background: #45a29e;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    h1, h2 {
+      color: #66fcf1;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #888;
+    }
+  </style>
+  <script>
+    function checkPIN() {
+      const pin = document.getElementById('pin').value;
+      if (pin === '0121') {
+        document.getElementById('main').style.display = 'block';
+        document.getElementById('login').style.display = 'none';
+      } else {
+        alert('Incorrect PIN. Access restricted.');
+      }
+    }
+  </script>
 </head>
 <body>
-    <div class="container" id="login">
-        <h1>Welcome to TrendLens</h1>
-        <p>Trade with Vision, Not Emotion</p>
-        <input type="password" id="pin" placeholder="Enter PIN (0121)">
-        <br>
-        <button onclick="checkPIN()">Enter</button>
-    </div>
+  <div class="box" id="login">
+    <h1>🔒 Private Launch</h1>
+    <p>Enter PIN to preview the confidential TrendLens site</p>
+    <input type="password" id="pin" placeholder="Enter PIN">
+    <br>
+    <button onclick="checkPIN()">Unlock</button>
+  </div>
 
-    <div class="container" id="main" style="display:none;">
-        <h2>TrendLens is in Stealth Mode</h2>
-        <p>This preview site is protected while we prepare the full investor-facing experience.</p>
-        <footer>© 2025 TrendLens — Patent Pending</footer>
-    </div>
+  <div class="box" id="main" style="display:none;">
+    <h2>🚀 TrendLens</h2>
+    <p><strong>Trade with Vision, Not Emotion</strong></p>
+    <p>AI-driven trade prediction. Confidence-ranked. Patent-pending.<br/>You're seeing this before the world does.</p>
+    <footer>© 2025 TrendLens — Confidential Preview</footer>
+  </div>
 </body>
 </html>
