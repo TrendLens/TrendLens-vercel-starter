@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendLens</title>
+    <style>
+        body {
+            background-color: #111;
+            color: #eee;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            padding: 2rem;
+        }
+        input {
+            padding: 0.5rem;
+            border-radius: 4px;
+            border: none;
+            margin-top: 1rem;
+        }
+        button {
+            padding: 0.6rem 1rem;
+            margin-top: 1rem;
+            border: none;
+            border-radius: 4px;
+            background-color: #00d084;
+            color: #111;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+    <script>
+        function checkPIN() {
+            const pin = document.getElementById('pin').value;
+            if (pin === '0121') {
+                document.getElementById('main').style.display = 'block';
+                document.getElementById('login').style.display = 'none';
+            } else {
+                alert('Incorrect PIN');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container" id="login">
+        <h1>Welcome to TrendLens</h1>
+        <p>Trade with Vision, Not Emotion</p>
+        <input type="password" id="pin" placeholder="Enter PIN (0121)">
+        <br>
+        <button onclick="checkPIN()">Enter</button>
+    </div>
+
+    <div class="container" id="main" style="display:none;">
+        <h2>TrendLens is in Stealth Mode</h2>
+        <p>This preview site is protected while we prepare the full investor-facing experience.</p>
+        <footer>© 2025 TrendLens — Patent Pending</footer>
+    </div>
+</body>
+</html>
